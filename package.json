@@ -1,0 +1,26 @@
+{
+  "name": "geo-rename",
+  "version": "0.0.1",
+  "description": "Adds IPTC geographic metadata to photos by reverse geocoding from lat/lon",
+  "bin": {
+    "geo-rename": "./bin/geo-rename.js"
+  },
+  "engines": {
+    "node": ">=8.2.0"
+  },
+  "preferGlobal": true,
+  "repository": "git@github.com:fortes/geo-rename",
+  "author": "Filipe Fortes <filipe@fortes.com>",
+  "license": "MIT",
+  "dependencies": {
+    "better-sqlite3": "^4.0.3",
+    "debug": "^3.1.0",
+    "glob": "^7.1.2",
+    "minimist": "^1.2.0",
+    "mkdirp": "^0.5.1",
+    "node-exiftool": "^2.3.0",
+    "node-fetch": "^1.7.3",
+    "rc": "^1.2.1",
+    "xdg-basedir": "^3.0.0"
+  }
+}
