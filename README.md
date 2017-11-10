@@ -37,14 +37,9 @@ Options:
 * I have not tested this other than with my own photos. May or may not work with your photos. Use at your own risk.
 * Google only allows 15,000 requests per IP per day. Script uses a local cache, but if you have many unique locations and photos, you may run over this limit.
 
-## Requirements
-
-0. [Node](https://nodejs.org/)
-1. [ExifTool](http://www.sno.phy.queensu.ca/~phil/exiftool/)
-
 ## Changelog
 
-* `0.0.1`: First release`
+* `0.0.0`: Poor quality code sitting on GitHub for the world to see
 
 ## Roadmap / TODO
 
