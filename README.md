@@ -36,6 +36,7 @@ I have not tested this other than with my own photos. May or may not work with y
 - [x] Cache in db
 - [x] Write to files
 - [x] Support reading directory
+- [ ] Write tests
 - [ ] Allow configuring Google API key
 - [ ] Rename
 - [ ] Ditch `debug` for verbose output in order to avoid stupid prefixes
