@@ -34,16 +34,16 @@ I have not tested this other than with my own photos. May or may not work with y
 - [x] Cache in db
 - [x] Write to files
 - [x] Support reading directory
-- [] Allow configuring Google API key
-- [] Rename
-- [] Ditch `debug` for verbose output in order to avoid stupid prefixes
-- [] Renaming
-   - [] Preview
-   - [] Allow output to destination directory
-- [] Bash completion via tabtab or other
-- [] Progress bar
-- [] Emoji / prettier output? https://github.com/sindresorhus/awesome-nodejs#command-line-utilities
-- [] Update notification https://github.com/yeoman/update-notifier
+- [ ] Allow configuring Google API key
+- [ ] Rename
+- [ ] Ditch `debug` for verbose output in order to avoid stupid prefixes
+- [ ] Renaming
+   - [ ] Preview
+   - [ ] Allow output to destination directory
+- [ ] Bash completion via tabtab or other
+- [ ] Progress bar
+- [ ] Emoji / prettier output? https://github.com/sindresorhus/awesome-nodejs#command-line-utilities
+- [ ] Update notification https://github.com/yeoman/update-notifier
 
 # License
 
