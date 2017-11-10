@@ -1,5 +1,7 @@
 # geo-rename
 
+[![build status](https://travis-ci.org/fortes/geo-rename.svg?branch=master)](https://travis-ci.org/fortes/geo-rename/) [![codecov](https://codecov.io/gh/fortes/geo-rename/branch/master/graph/badge.svg)](https://codecov.io/gh/fortes/geo-rename) [![Greenkeeper badge](https://badges.greenkeeper.io/fortes/geo-rename.svg)](https://greenkeeper.io/)
+
 Adds IPTC geographic metadata to photos by reverse geocoding from lat/lon, the following IPTC tags are added:
 
 * Country

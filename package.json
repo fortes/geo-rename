@@ -8,6 +8,10 @@
   "engines": {
     "node": ">=8.2.0"
   },
+  "scripts": {
+    "coverage": "jest --collectCoverage --coverageDirectory ./coverage",
+    "test": "jest"
+  },
   "preferGlobal": true,
   "repository": "git@github.com:fortes/geo-rename",
   "author": "Filipe Fortes <filipe@fortes.com>",
@@ -22,5 +26,9 @@
     "node-fetch": "^1.7.3",
     "rc": "^1.2.1",
     "xdg-basedir": "^3.0.0"
+  },
+  "devDependencies": {
+    "codecov": "^3.0.0",
+    "jest": "^21.2.1"
   }
 }
