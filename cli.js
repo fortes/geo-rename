@@ -3,7 +3,7 @@ const {promisify} = require('util');
 
 const mkdirp = promisify(require('mkdirp'));
 const minimist = require('minimist');
-const package = require('./package.json');
+const packageInfo = require('./package.json');
 const path = require('path');
 const rc = require('rc');
 const xdgBasedir = require('xdg-basedir');
@@ -35,24 +35,24 @@ function parseArgsAndLoadConfig(argv) {
     string: ['cache-folder'],
     unknown: option => {
       if (/^--?/.test(option)) {
-        process.stdout.write(`${package.name} unrecognized option: '${option}'
-Try '${package.name} --help' for more information\n`);
-        process.exit(1);
+        console.error(`${packageInfo.name} unrecognized option: '${option}'
+Try '${packageInfo.name} --help' for more information\n`);
+        return 1;
       }
     },
   });
 
   return rc(
-    package.name,
+    packageInfo.name,
     {
-      'cache-folder': path.join(xdgBasedir.cache, package.name),
+      'cache-folder': path.join(xdgBasedir.cache, packageInfo.name),
     },
     args,
   );
 }
 
 function printUsage() {
-  process.stdout.write(`${package.name} [OPTIONS] FILE
+  console.log(`${packageInfo.name} [OPTIONS] FILE
 Find location information from GPS and write to EXIF
 
   --cache-folder <path>
@@ -80,12 +80,12 @@ process.on('SIGTERM', () => {
   process.exit(130);
 });
 process.on('uncaughtException', e => {
-  process.stderr.write(`Uncaught exception: ${e.message}\n`);
+  console.error(`Uncaught exception: ${e.message}\n`);
   trace(`Exception stack: ${e.stack}`);
   process.exit(1);
 });
 process.on('unhandledRejection', (reason, promise) => {
-  process.stderr.write(`Uncaught rejection at ${promise}: ${reason}\n`);
+  console.error(`Uncaught rejection at ${promise}: ${reason}\n`);
   trace(`Stack: ${e.stack}`);
   process.exit(1);
 });
@@ -104,10 +104,10 @@ module.exports.main = async function main(argv) {
 
   if (conf.help || !conf._.length) {
     printUsage();
-    process.exit();
+    return 0;
   }
 
-  verbose(`Version ${package.version}`);
+  verbose(`Version ${packageInfo.version}`);
   trace('Loaded configuration: %O', conf);
   trace('File arguments: %O', conf._);
 

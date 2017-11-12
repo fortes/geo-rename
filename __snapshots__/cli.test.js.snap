@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`argument handling usage info if no arguments 1`] = `
+"geo-rename [OPTIONS] FILE
+Find location information from GPS and write to EXIF
+
+  --cache-folder <path>
+  -f, --force
+  -h, --help
+  --offline
+  -q, --quiet
+  -s, --skip-backup
+  -v, --verbose
+  -V, --version
+"
+`;
