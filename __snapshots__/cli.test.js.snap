@@ -1,5 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`argument handling basic argument parsing 1`] = `
+Object {
+  "cachePath": "/tmp/locations.sqlite",
+  "force": true,
+  "offline": true,
+  "skipBackup": true,
+}
+`;
+
 exports[`argument handling usage info if no arguments 1`] = `
 "geo-rename [OPTIONS] FILE
 Find location information from GPS and write to EXIF
