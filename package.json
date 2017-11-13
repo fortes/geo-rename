@@ -9,6 +9,7 @@
     "node": ">=8.2.0"
   },
   "scripts": {
+    "clean": "rm -rf coverage",
     "coverage": "jest --collectCoverage --coverageDirectory ./coverage",
     "test": "jest"
   },

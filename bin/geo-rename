@@ -2,9 +2,9 @@
 'use strict';
 
 const {callbackify} = require('util');
-const main = callbackify(require('../cli').main);
-const {trace} = require('../log');
-const {verbose} = require('../log');
+const main = callbackify(require('../lib/cli').main);
+const {trace} = require('../lib/log');
+const {verbose} = require('../lib/log');
 
 main(process.argv.slice(2), (exitCode, err) => {
   if (err) {
