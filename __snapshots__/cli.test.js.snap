@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`argument handling basic argument parsing 1`] = `
+exports[`argument handling passes options 1`] = `
 Object {
   "cachePath": "/tmp/locations.sqlite",
   "force": true,
@@ -9,7 +9,28 @@ Object {
 }
 `;
 
-exports[`argument handling usage info if no arguments 1`] = `
+exports[`argument handling usage info if no files 1`] = `
+"geo-rename [OPTIONS] FILE
+Find location information from GPS and write to EXIF
+
+  --cache-folder <path>
+  -f, --force
+  -h, --help
+  --offline
+  -q, --quiet
+  -s, --skip-backup
+  -v, --verbose
+  -V, --version
+"
+`;
+
+exports[`argument handling usage info if unknown argument 1`] = `
+"geo-rename unrecognized option: '--foo'
+Try 'geo-rename --help' for more information
+"
+`;
+
+exports[`argument handling usage info if unknown argument 2`] = `
 "geo-rename [OPTIONS] FILE
 Find location information from GPS and write to EXIF
 

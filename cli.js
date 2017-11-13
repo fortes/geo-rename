@@ -11,6 +11,8 @@ const {tagFiles} = require('./geo-rename');
 const {trace} = require('./log');
 const {verbose} = require('./log');
 
+let hasUnknownOption;
+
 function parseArgsAndLoadConfig(argv) {
   const args = minimist(argv, {
     alias: {
@@ -35,10 +37,13 @@ function parseArgsAndLoadConfig(argv) {
     string: ['cache-folder'],
     unknown: option => {
       if (/^--?/.test(option)) {
+        hasUnknownOption = true;
         console.error(`${packageInfo.name} unrecognized option: '${option}'
 Try '${packageInfo.name} --help' for more information\n`);
-        return 1;
+        return false;
       }
+
+      return true;
     },
   });
 
@@ -91,6 +96,7 @@ process.on('unhandledRejection', (reason, promise) => {
 });
 
 module.exports.main = async function main(argv) {
+  hasUnknownOption = false;
   const conf = parseArgsAndLoadConfig(argv);
 
   if (conf.verbose) {
@@ -102,7 +108,7 @@ module.exports.main = async function main(argv) {
     trace.enabled = true;
   }
 
-  if (conf.help || !conf._.length) {
+  if (conf.help || !conf._.length || hasUnknownOption) {
     printUsage();
     return 0;
   }
