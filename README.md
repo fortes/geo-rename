@@ -37,6 +37,14 @@ Options:
 * I have not tested this other than with my own photos. May or may not work with your photos. Use at your own risk.
 * Google only allows 15,000 requests per IP per day. Script uses a local cache, but if you have many unique locations and photos, you may run over this limit.
 
+## Renaming via exiftool
+
+Fails if one of these isn't defined though:
+
+```bash
+exiftool nontagged.jpg '-testname<${CreateDate;%Y-%m-%d %H.%M.%S} ${Location;}-${City;}-${State;}-${Country}%-c.%le' 
+```
+
 ## Changelog
 
 * `0.0.0`: Poor quality code sitting on GitHub for the world to see
