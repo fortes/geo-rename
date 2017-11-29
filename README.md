@@ -46,15 +46,17 @@ Options:
 - [x] Query Google
 - [x] Cache in db
 - [x] Write to files
-- [x] Support reading directory
+- [x] Support reading directories
 - [ ] Write tests
+- [ ] Consider [`exiftool-vendored`](https://github.com/mceachen/exiftool-vendored.js) (check performance)
+- [ ] Setup code auto-formatting & lint
+- [ ] Consider using flow https://javascriptplayground.com/blog/2017/01/npm-flowjs-javascript/
 - [ ] Allow configuring Google API key
-- [ ] Rename
-- [ ] Ditch `debug` for verbose output in order to avoid stupid prefixes
 - [ ] Renaming
    - [ ] Preview
    - [ ] Allow output to destination directory
 - [ ] Bash completion via tabtab or other
+- [ ] Ditch `debug` for verbose output for better output
 - [ ] Progress bar
 - [ ] Emoji / prettier output? https://github.com/sindresorhus/awesome-nodejs#command-line-utilities
 - [ ] Update notification https://github.com/yeoman/update-notifier
