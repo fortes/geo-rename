@@ -18,7 +18,7 @@
   "author": "Filipe Fortes <filipe@fortes.com>",
   "license": "MIT",
   "dependencies": {
-    "better-sqlite3": "^4.0.3",
+    "better-sqlite3": "^5.0.0",
     "debug": "^3.1.0",
     "glob": "^7.1.2",
     "minimist": "^1.2.0",
