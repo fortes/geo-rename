@@ -24,7 +24,7 @@
     "minimist": "^1.2.0",
     "mkdirp": "^0.5.1",
     "node-exiftool": "^2.3.0",
-    "node-fetch": "^2.0.0",
+    "node-fetch": "2.2.0",
     "rc": "^1.2.1",
     "xdg-basedir": "^3.0.0"
   },
