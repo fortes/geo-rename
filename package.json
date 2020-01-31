@@ -29,7 +29,7 @@
     "xdg-basedir": "^3.0.0"
   },
   "devDependencies": {
-    "codecov": "^3.0.0",
+    "codecov": "^3.6.3",
     "jest": "^22.0.0"
   }
 }
